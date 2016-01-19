@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div id="login-form">
+
+	<form role="form" action="/auth/create" method="POST">
+	  <div class="form-group">
+	      <input type="email" class="form-control" name="email" placeholder="Enter email">
+	  </div>
+	  <div class="form-group">
+	      <input type="name" class="form-control" name="name" placeholder="Enter Name">
+	  </div>
+	  <div class="form-group">
+	      <input type="password" class="form-control" name="password" placeholder="Enter password">
+	  </div>
+	  <div class="checkbox">
+	    <label><input type="checkbox"> Remember me</label>
+	  </div>
+	  <div class="form-group">
+	    	{% module xsrf_form_html() %}
+	      <button type="submit" class="btn btn-info">Sign Up</button>
+	  </div>
+	</form>
+</div>
+{% end %}

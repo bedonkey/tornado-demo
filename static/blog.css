@@ -1,0 +1,207 @@
+/*
+ * Copyright 2009 Facebook
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License. You may obtain
+ * a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.woff');
+}
+
+body {
+  background: white;
+  color: black;
+  margin: 15px;
+  margin-top: 0;
+}
+
+body,
+input,
+textarea {
+  font-family: Georgia, serif;
+  font-size: 12pt;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0;
+}
+
+td {
+  border: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Helvetica Nue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 20pt;
+  line-height: 50px;
+}
+
+pre,
+code {
+  font-family: monospace;
+  color: #060;
+}
+
+pre {
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid silver;
+  line-height: 14pt;
+}
+
+a, a:hover, a:focus{
+  color: #00c;
+  text-decoration: none;
+}
+
+#body {
+  max-width: 1000px;
+  margin: auto;
+}
+
+#header {
+  background-color: #333;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 50px;
+  height: 50px;
+  position: relative;
+}
+
+#header,
+#header a {
+  color: white;
+}
+
+#header img {
+  cursor: pointer;
+}
+
+#header h1 a {
+  text-decoration: none;
+}
+
+#header .account {
+  width: 120px;
+  top: 50px;
+  background: #ddd;
+  color: black;
+  right: 0;
+  position: absolute;
+}
+
+#header .triangle-top {
+  color: #ddd;
+  position: absolute;
+  top: -12px;
+  right: 15px;
+  line-height: 0;
+}
+
+#header .account a{
+  color: black;
+}
+
+#header .account ul{
+  list-style-type: none;
+  padding: 0 10px;
+}
+
+#header .account li{
+  padding: 5px;
+  margin: 0;
+  line-height: 20px;
+}
+
+#content {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 20px;
+}
+
+#login-form {
+  width: 300px;
+  margin: auto;
+}
+
+#login-form input.btn{
+  float: right;
+}
+
+.entry h2 a {
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.entry a.edit {
+  color: #3399CC;
+}
+
+.entry {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ddd;
+}
+
+.entry .date {
+  margin-top: 3px;
+  font-size: 13px;
+}
+
+.entry p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.entry .body {
+  margin-top: 1em;
+  line-height: 16pt;
+}
+
+.compose td {
+  vertical-align: middle;
+  padding-bottom: 5px;
+}
+
+.compose td.field {
+  padding-right: 10px;
+}
+
+.compose .title,
+.compose .submit {
+  font-family: "Helvetica Nue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.compose .title {
+  font-size: 20pt;
+}
+
+.compose .title,
+.compose .markdown {
+  width: 100%;
+}
+
+.compose .markdown {
+  height: 400px;
+  line-height: 16pt;
+}

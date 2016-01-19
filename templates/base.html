@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ escape(handler.settings["blog_title"]) }}</title>
+    <link rel="stylesheet" href="{{static_url("bootstrap.min.css")}}" type="text/css">
+    <link rel="stylesheet" href="{{ static_url("blog.css") }}" type="text/css">
+    <script src="{{static_url("angular.min.js")}}"></script>
+
+    <link rel="alternate" href="/feed" type="application/atom+xml" title="{{ escape(handler.settings["blog_title"]) }}">
+    {% block head %}{% end %}
+  </head>
+  <body>
+    <div id="body">
+      <div id="header">
+        <div style="float:right">
+          {% if current_user %}
+            <a href="/compose">
+              <button type="button" class="btn btn-primary">New post</button>
+            </a>
+            <img src="static/images/account.png" height="25px"/>
+          {% else %}
+            <a href="/auth/login">
+              <button type="button" class="btn btn-default">Sign In</button>
+            </a>
+            <a href="/auth/create">
+              <button type="button" class="btn btn-success">Sign Up</button>
+            </a>
+          {% end %}
+        </div>
+        <div class="account">
+          <div class="triangle-top">
+            <span class="glyphicon glyphicon-triangle-top"></span>
+          </div>
+          <ul>
+            <li>Bedonkey</li>
+            <li>
+              <a href="/auth/logout">
+                Logout
+              </a>
+            </li>
+          </ul>
+          <a href=""></a>
+        </div>
+        <h1><a href="/">{{ escape(handler.settings["blog_title"]) }}</a></h1>
+      </div>
+      <div id="content">{% block body %}{% end %}</div>
+    </div>
+    {% block bottom %}{% end %}
+  </body>
+</html>

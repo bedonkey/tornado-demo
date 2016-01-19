@@ -1,0 +1,12 @@
+<div class="entry">
+  <h2>
+  	<a href="/entry/{{ entry['slug'] }}">{{ entry['title'] }}</a>
+  	<a href="/compose?id={{ entry['id'] }}" class="edit">
+  		<span class="glyphicon glyphicon-pencil"></span>
+  	</a>
+  </h1>
+  <div class="date">{{ entry['published'] }}</div>
+  <div class="body">{% raw entry['html'] %}</div>
+  {% if current_user %}
+  {% end %}
+</div>
